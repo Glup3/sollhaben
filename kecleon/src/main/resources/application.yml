@@ -1,7 +1,10 @@
 server:
   port: 8888
 
+
 spring:
+  application:
+    name: kecleon
   cloud:
     config:
       server:
