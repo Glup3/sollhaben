@@ -11,6 +11,7 @@ plugins {
 group = "at.glup3.sollhaben"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_11
+val SPRINGFOX_VERSION = "3.0.0"
 
 repositories {
     mavenCentral()
@@ -28,6 +29,8 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.springframework.cloud:spring-cloud-starter-config")
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
+    implementation("io.springfox:springfox-boot-starter:${SPRINGFOX_VERSION}")
+    implementation("io.springfox:springfox-swagger-ui:${SPRINGFOX_VERSION}")
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
         exclude(module = "mockito-core")
